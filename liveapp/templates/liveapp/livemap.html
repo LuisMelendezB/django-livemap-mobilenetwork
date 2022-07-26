@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+<head>
+  {% load static %}
+	<title>LiveMap</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static 'liveapp/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/bootstrap_slate.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/livemap.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/font-awesome.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/all.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/jquery-ui.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/jquery-ui.theme.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'liveapp/css/jquery-ui.structure.css' %}" type = "text/css"/>
+
+	<script type="text/javascript" src="{% static 'liveapp/js/jquery-2.1.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/popper.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/jquery.blockUI.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/MeasureTool.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/jquery-ui.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/font-awesome.js' %}"></script>
+	<script type="text/javascript" src="{% static 'liveapp/js/all.js' %}"></script>
+	<script defer type="text/javascript" src="{% static 'liveapp/js/markerclustererplus.js' %}"></script>
+</head>
+
+<body class="body">
+	<div id="main_block">
+    <div class="grid-container">
+      <div class="item-code">
+        <input id="input_propiedad" class="form-control mr-sm-2 item-node-style" type="text" placeholder="Node code">
+      </div>
+      <div class="item-name">
+        <input id="input_nombre" class="form-control mr-sm-2 item-node-style" type="text" placeholder="Node name">
+      </div>
+      <div class="item-icon-kpi">
+        <i class="fa fa-shapes" ></i>
+      </div>    
+      <div class="item-kpi">
+        <select id="kpi" class="form-control mr-sm-2 item-kpi-style">{% for kpi_name in kpi %}{% if forloop.first %} 
+          <option value="{{kpi_name}}" selected="">{{kpi_name}}</option>{% else %}
+          <option value="{{kpi_name}}">{{kpi_name}}</option>{% endif %}{% endfor %}
+        </select>
+      </div>
+      <div class="item-icon-date">
+        <i class="fa fa-calendar-alt" ></i>
+      </div>
+      <div class="item-date">
+          <input class="form-control mr-sm-2 item-date-style" type="text" id="datepicker-s" autocomplete="off" readonly="readonly">
+      </div>
+      <div id="map" class="item-map"></div>
+      <div class="item-foot"><i class="fa fa-mail-bulk"></i> luis.melendez.bn@gmail.com</div>
+    </div>
+  
+  <div id="displayBox" class="loading-box">
+    <img src="{% static 'liveapp/img/loading.gif' %}"/><br><h3></h3>
+  </div>
+  
+  <div id="kpi_legends"></div>
+  
+  <div id="mapLegend_auto" class="legend-auto">
+    <div class="custom-control custom-switch div-plot-cn" id="div-check">
+        <input type="checkbox" class="custom-control-input" id="autoCheck">
+        <label class="custom-control-label" for="autoCheck"></i>  Draw cells</label>
+    </div>            
+  </div>
+  
+  <script defer type="text/javascript" src="{% static 'liveapp/js/livemap.min.js' %}"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuRTQlN6s6fWc3HIsDhGWCd8ymXgONEXc&callback=myMap&libraries=geometry,drawing"></script>
+  
+	</div>
+</body>
+</html>
+

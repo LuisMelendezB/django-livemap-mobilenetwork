@@ -1,0 +1,177 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw;
+    grid-template-rows: 8vh 87vh 5vh;
+    grid-template-areas: 
+    ". . . code code code code code code code code code code . name name name name name name name name name name . . . . . . . . icon-kpi kpi kpi kpi kpi kpi kpi . icon-date date date date date date date . . ."
+    ". . . map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map map . . . "
+    ". . . foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot foot . . ."
+}
+
+.item-code {
+    grid-area: code;
+    place-self: center stretch;
+}
+
+.item-name {
+    grid-area: name;
+    place-self: center stretch;
+}
+
+.item-kpi {
+    grid-area: kpi;
+    place-self: center stretch;
+}
+
+.item-date {
+    grid-area: date;
+    place-self: center stretch;
+}
+
+.item-icon-date {
+    grid-area: icon-date;
+    place-self: center;
+}
+
+.item-icon-kpi {
+    grid-area: icon-kpi;
+    place-self: center;
+}
+
+.item-map {
+    grid-area: map;
+}
+
+.item-foot {
+    grid-area: foot;
+    text-align: right;
+    place-self: center stretch;
+}
+
+.item-date-style {
+	font-size: 0.7em !important;
+	height: 0.7em !important;
+}
+
+.item-kpi-style {
+    font-size: 0.7em !important;
+    padding: 0px !important;	
+    height: 2.4em !important;
+}
+
+.item-node-style {
+	font-size: 0.8em !important;
+	height: 0.9em !important;
+}
+
+.loading-box {
+    display:none;
+    opacity: 0.5;
+    color: gray;
+    text-shadow:1px 1px 1px gray;
+}
+
+.kpi-legends {
+    display: none;
+    background:rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #504f4f;
+}
+
+.td-legends {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.table-legends
+{	
+	font-family: "Lucida Console";
+	opacity: 0.8;
+    color: white;
+    text-shadow:
+    -0.5px -0.5px 0 #292929,
+    0.5px -0.5px 0 #292929,
+    -0.5px 0.5px 0 #292929,
+    0.5px 0.5px 0 #292929;
+}
+
+.div-plot-cn label, input{
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+.div-plot-cn label {
+    color: gray;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(194, 194, 194);
+}
+
+.div-plot-cn input{
+    height: 0.4em;
+}
+
+.div-plot label, input{
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+.div-plot label {
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px gray;
+}
+
+.div-plot input{
+    height: 0.4em;
+}  
+
+.legend-auto {
+    padding-bottom: 1.5vh;
+}
+
+.ui-datepicker table {
+	font-size: .5em !important;
+	margin: 0 0 .1em !important;
+}
+
+.ui-datepicker th { 
+	padding: .6em .2em !important;
+}
+
+.ui-datepicker {
+	width: 15em !important;
+	padding: .2em .2em 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 1.2em !important;
+	line-height: 1em !important;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 0.8em !important;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+	font-size: 0.7em;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+
+* html .ui-autocomplete {
+    height: 100px;
+}
+
+.ui-autocomplete .ui-menu-item {
+    font-size:small;
+}
+
+.ui-dialog-title{
+    font-size: 70% !important;
+}
+    
