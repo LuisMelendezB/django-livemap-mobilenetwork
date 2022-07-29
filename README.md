@@ -6,7 +6,7 @@ https://luismelendezb.pythonanywhere.com/livemap/kpis/
 
 Django project to draw polygons into google maps to show mobile network KPIs dynamically.
 
-- The map starts with the nodes shown as google maps markers, to show the kpi of the selected date it is necessary to activate the "draw cells" switch, then when moving over the map the kpi of each cell available in each node will be dynamically shown. Each band corresponds to a cell.
+- The map starts with the nodes shown as google maps markers, to show the kpi of the selected date it is necessary to activate the "draw cells" switch located at the bottom of the map, then when moving over the map the kpi of each cell available in each node will be dynamically shown. Each band corresponds to a cell.
 
 - Nodes and cells are clustered depending on the current zoom.
 
